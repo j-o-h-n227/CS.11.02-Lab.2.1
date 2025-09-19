@@ -66,11 +66,12 @@ public class Main {
 
     // 7. roundPositiveValueToNearestInteger
     public static int roundPositiveValueToNearestInteger(double num) {
-        return (int) Math.round(num);
+        int i = (int) (num + 0.5);
+        return i;
     }
 
     // 8. roundNegativeValueToNearestInteger
     public static int roundNegativeValueToNearestInteger(double num) {
-        return (int) Math.floor(num);
+        return -roundPositiveValueToNearestInteger(-num);
     }
 }
